@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+docnames=( "Dictionary\nLearnersGuide\nNysjomon" )
+
+declare -A docs=( [Dictionary]="$HOME/Resources/Nysjomon/Dictionary" [Dictionary]="$HOME/Resources/Nysjomon/LearnersGuide" [Nysjomon]="$HOME/Resources/Nysjomon/Nysjomon")
+choice=$(echo -e ${docnames[@]} | dmenu -i -p 'Help Docs: ')
+
+file=${docs[${choice[@]}]}
+
+bash $file &

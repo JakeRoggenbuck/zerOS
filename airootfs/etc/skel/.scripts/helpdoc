@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+dotfilenames=( "vim" )
+
+declare -A dotfiles=( [vim]="$HOME/Resources/VimCommands/vim.ms.pdf" )
+choice=$(echo -e ${dotfilenames[@]} | dmenu -i -p 'Help Docs: ')
+
+file=${dotfiles[${choice[@]}]}
+
+mupdf $file

@@ -3,14 +3,21 @@ xorg-server
 xorg-xinit
 xorg-twm
 xterm
+xorg-xrandr
 xf86-video-intel
+xf86-video-vesa
 
 #wm
 bspwm
+xcb-util
+xcb-util-wm
+xcb-util-keysyms
+xdo
 sxhkd
 
 #zeros-extra
 bash
+feh
 neovim
 git
 alacritty
@@ -20,6 +27,7 @@ neofetch
 compton
 redshift
 ranger
+ruby
 
 #archiso
 arch-install-scripts

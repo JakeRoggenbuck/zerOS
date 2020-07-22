@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+i3lock -i .lockscreen --insidevercolor=24242488 --insidewrongcolor=24242488 --insidecolor=24242488 --ringvercolor=24242488 --ringwrongcolor=24242488 --ringcolor=24242488 --linecolor=24242488 --keyhlcolor=dedede88 --bshlcolor=24242488

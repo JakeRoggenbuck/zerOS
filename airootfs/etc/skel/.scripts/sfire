@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+echo firefox:
+read answere
+firefox https://www.google.com/search?q=$answere

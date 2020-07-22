@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+feh --bg-fill ~/Downloads/windumb.jpg &
+pkill polybar &
+feh ~/Downloads/notepad.png && bspc node -t floating &
+
+#cp -f $HOME/.config/termite/dots/configLight $HOME/.config/termite/config &
+#termite && bspc node -t floating &

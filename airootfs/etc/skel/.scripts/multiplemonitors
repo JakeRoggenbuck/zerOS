@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+xrandr --output HDMI1 --primary
+xrandr --output HDMI1 --left-of eDP1
+polybar example -r &

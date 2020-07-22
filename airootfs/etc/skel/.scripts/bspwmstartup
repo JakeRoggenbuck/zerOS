@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#set wrokspaces
+bspc monitor $(bspc query -M --names | head -n 1) -d 1 2 3 4 5 6 7 8 9 10
+
+#set wallpaper
+bash $HOME/.scripts/wallpaperinit
+#bash $HOME/.scripts/batterybackground &
+
+bash $HOME/.scripts/capstoesc
+
+#welcome message and battery level
+#pkill -f 'batcheck'
+#bash -c "exec -a batcheck $HOME/.scripts/batterychecker &"
+
+#set wmname for pycharm
+wmname LG3D

@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+while true
+do
+        bat=$(acpi -i | grep harging | sed 's/[^,]*, // ; s/%.*//')
+
+        if [ "$bat" -lt 100 ] && [ "$bat" -gt 90 ]
+        then
+            feh --bg-fill /home/jake/.batteryWallpapers/Manjarowallpaper.png
+        elif [ "$bat" -lt 90 ] && [ "$bat" -gt 80 ]
+		then
+			feh --bg-fill /home/jake/.batteryWallpapers/Manjarowallpaper1.png
+		elif [ "$bat" -lt 80 ] && [ "$bat" -gt 70 ]
+		then
+			feh --bg-fill /home/jake/.batteryWallpapers/Manjarowallpaper2.png	
+		elif [ "$bat" -lt 70 ] && [ "$bat" -gt 60 ]
+		then
+			feh --bg-fill /home/jake/.batteryWallpapers/Manjarowallpaper3.png
+		elif [ "$bat" -lt 60 ] && [ "$bat" -gt 50 ]
+		then
+			feh --bg-fill /home/jake/.batteryWallpapers/Manjarowallpaper4.png
+		elif [ "$bat" -lt 50 ] && [ "$bat" -gt 40 ]
+		then
+			feh --bg-fill /home/jake/.batteryWallpapers/Manjarowallpaper5.png
+		elif [ "$bat" -lt 40 ] && [ "$bat" -gt 30 ]
+		then
+			feh --bg-fill /home/jake/.batteryWallpapers/Manjarowallpaper6.png
+		elif [ "$bat" -lt 30 ] && [ "$bat" -gt 20 ]
+		then
+			feh --bg-fill /home/jake/.batteryWallpapers/Manjarowallpaper7.png
+		elif [ "$bat" -lt 20 ] && [ "$bat" -gt 10 ]
+		then
+			feh --bg-fill /home/jake/.batteryWallpapers/Manjarowallpaper8.png
+        elif [ "$bat" -lt 10 ] && [ "$bat" -gt 0 ]
+		then
+			feh --bg-fill /home/jake/.batteryWallpapers/Manjarowallpaper9.png
+		else
+			feh --bg-fill /home/jake/.batteryWallpapers/Manjarowallpaper10.png
+		fi
+        sleep 30
+done

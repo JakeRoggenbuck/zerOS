@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+echo -n "Wiki search: " 
+read page
+w3m -dump https://en.wikipedia.org/wiki/Special:Search?search=$page > /tmp/wiki && vim /tmp/wiki

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+compton &
+dunst &
+xscreensaver &
+redshift -P -O 3500 &
+
+bash $HOME/.scripts/wallpaperinit
+bash $HOME/.scripts/capstoesc

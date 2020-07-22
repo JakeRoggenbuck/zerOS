@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+notify-send Finished && ffplay -nodisp -autoexit $HOME/Media/Music/'Vampire Weekend - Run-TdjL0hBabsU.mp3'

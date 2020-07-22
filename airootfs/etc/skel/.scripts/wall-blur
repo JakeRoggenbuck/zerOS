@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+file=$(ls $HOME/.wallpaper*)
+
+filename=$(basename -- $file"")
+extension="${filename##*.}"
+
+convert -blur 0x8 $file $HOME/.bluredbg.$extension
+feh --bg-fill $HOME/.bluredbg.$extension

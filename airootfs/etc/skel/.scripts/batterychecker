@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+while true
+do
+        bat=$(acpi -i | grep charging | sed 's/[^,]*, // ; s/%.*//')
+
+        if [ $bat -lt 20 ]
+        then
+                notify-send -u critical "Battery $bat%"
+        fi
+        echo $bat
+        sleep 300
+done

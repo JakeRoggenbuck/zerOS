@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+dotfilenames=( "bashrc\nbspwmrc\nsxhkdrc\npolybar\nnvim\nvim\ndunst" )
+
+declare -A dotfiles=( ["bashrc"]="$HOME/.bashrc" ["bspwmrc"]="$HOME/.config/bspwm/bspwmrc" ["sxhkdrc"]="$HOME/.config/sxhkd/sxhkdrc" ["polybar"]="$HOME/.config/polybar/config" ["nvim"]="$HOME/.config/nvim/init.vim" [vim]="$HOME/.config/vim/init.vim" ["dunst"]="$HOME/.config/dunst/dunstrc")
+choice=$(echo -e ${dotfilenames[@]} | dmenu -i -p 'Config Files: ')
+
+file=${dotfiles[${choice[@]}]}
+
+notify-send "Opened" $file
+xfce4-terminal -e "nvim $file"

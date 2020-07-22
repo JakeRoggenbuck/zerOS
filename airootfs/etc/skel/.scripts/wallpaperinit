@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+file=$(ls $HOME/.config/wallpaper/ | shuf -n 1)
+
+filename=$(basename -- "$file")
+extension="${filename##*.}"
+
+rm $HOME/.wallpaper*
+cp $HOME/.config/wallpaper/$file $HOME/.wallpaper.$extension
+chmod 777 $HOME/.wallpaper.$extension
+feh --bg-fill $HOME/.wallpaper.$extension
