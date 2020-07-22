@@ -133,4 +133,3 @@ if [ "$TERM" = "linux" ]; then
     clear #for background artifacting
 fi
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
